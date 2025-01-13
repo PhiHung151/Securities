@@ -1,0 +1,14 @@
+@model Securities.Models.Product
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h1>@Model.Title</h1>
+<p>@Model.Description</p>
+<p>Starting Price: @Model.StartingPrice</p>
+<p>Auction Start: @Model.City</p>
+<p>Auction End: @Model.District</p>
+
+<div>
+    <a href="/Auction/Auction?ProductId=@Model.ProductID" class="btn">Join Auction</a>
+</div>

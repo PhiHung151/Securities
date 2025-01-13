@@ -1,0 +1,27 @@
+@model IEnumerable<Securities.Models.Product>
+@{
+    ViewData["Title"] = "Properties";
+}
+
+<h1>Available Properties</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Starting Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Title</td>
+                <td>@product.Description</td>
+                <td>@product.StartingPrice</td>
+                <td><a href="/Product/Details/@product.ProductID">View Details</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
